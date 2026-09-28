@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS alumnos (
         CHECK (email REGEXP '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'),
     
     CONSTRAINT chk_telf_numeros 
-        CHECK (telf IS NULL OR telf REGEXP '^[0-9]+$'),
+        CHECK (telf IS NULL OR telf = '' OR telf REGEXP '^[0-9]+$'),
 
     CONSTRAINT fk_alumno_carrera
         FOREIGN KEY(id_carrera_fk)
@@ -46,3 +46,8 @@ DROP TABLE alumnos;
 
 SELECT * FROM carreras;
 SELECT * from alumnos;
+SELECT * FROM profesores;
+SELECT * from materias;
+SELECT * FROM inscripciones;
+
+SHOW TABLES;

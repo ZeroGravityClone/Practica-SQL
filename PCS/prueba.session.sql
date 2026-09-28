@@ -28,12 +28,15 @@ CREATE TABLE alumnos (
 
 
 
-INSERT INTO carreras (id_carrera, nombre_carrera)
+INSERT INTO carreras (id_carrera, carrera)
 VALUES (1, 'SISTEMAS');
 
 
-INSERT INTO alumnos (nombre, apellido, cedula, email, id_carrera_fk)
-VALUES ('duglas', 'santos', 'V-10203050', 'robert@correo.com', 1);
+INSERT INTO alumnos (nombre, apellido, cedula, email, telf, id_carrera_fk)
+VALUES ('duglas', 'santos', 'V-10203050', 'robert@correo.com', '0412-3487324', 1);
+
+INSERT INTO alumnos (nombre, apellido, cedula, email, telf, id_carrera_fk)
+VALUES ('dasv', 'robs', 'V-10203060', 'bdfgj@correo.com', '0412-23443', 1);
 
 
 UPDATE alumnos SET cedula = 'V-10203010' WHERE id_alumno = 1;
